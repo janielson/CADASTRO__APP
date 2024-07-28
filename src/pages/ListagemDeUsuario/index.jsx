@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect,useState } from "react"
 
 import TopBackground from "../../componets/TopBackground"
 import { Body } from "./styles"
@@ -11,25 +11,46 @@ import api from "../../serveces/api"
 
 
 
-function ListaDeUsuario(){
+function ListaDeUsuario() {
 
-useEffect(() => {
-    const fetchData = async () =>{
-        const {data} = await api.get("/usuario")
-        console.log(data)}
-   
-    fetchData()
-}, []);
+    const [user,setUser] = useState([])
 
- 
-    return(
-       <Body>
-        <TopBackground model={"listUser"} />
-        <h1>USUÁRIOS REGISTRADOS</h1>
 
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const { data } = await api.get("/usuario")
+            
+            setUser(data)
+        }
+        
+        fetchData()
+    }, [ ]);
+
+
+
+    
+
+
+    return (
+        <Body>
+            <TopBackground model={"listUser"} />
+            <h1>USUÁRIOS REGISTRADOS</h1>
+
+         { user.map(users => (
             
 
-       </Body>
+            <div id={users.id}>
+               <p>{users.name}</p>
+               <p>{users.age}</p>
+               <p>{users.email}</p>
+
+            </div>
+
+         ))}
+
+
+        </Body>
 
     )
 }

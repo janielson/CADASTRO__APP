@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import {useRef } from "react"
 import api from '../../serveces/api'
 
 import {  useNavigate } from 'react-router-dom'
@@ -18,6 +18,9 @@ import  Button  from "../../componets/MainButton"
 import TopBackgroud from "../../componets/TopBackground";
 
 
+
+
+
 function Home() {
   const inputName = useRef();
   const inputAge = useRef();
@@ -25,6 +28,8 @@ function Home() {
 
 
   const navigate = useNavigate()
+
+  
 
  
 

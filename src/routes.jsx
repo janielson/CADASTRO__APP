@@ -7,7 +7,7 @@ import ListaDeUsuario from './pages/ListagemDeUsuario';
 const router = createBrowserRouter([
   
     {
-        path:'/',   // NOSSO PRIMEIRO PATH SEMPRE SERÁ / ELA E A RAIZ DO NOSSO PROJETO A NOSSA PAGINA PRINCIPAL.
+        path:'/',   // NOSSO PRIMEIRO PATH SEMPRE SERÁ /, ELA E A RAIZ DO NOSSO PROJETO A NOSSA PAGINA PRINCIPAL.
         element: < Home />
 
     },

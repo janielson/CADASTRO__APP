@@ -20,7 +20,7 @@ export const Body = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-background: #000;
+background: #fff;
 height: 100vh;
 width: 100vw;
 padding: 20px;
